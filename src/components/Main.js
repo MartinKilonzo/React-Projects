@@ -1,8 +1,26 @@
 require('normalize.css/normalize.css');
 require('styles/App.css');
-import HelloWorld from './HelloWorld';
 
-export default HelloWorld;
+import React from 'react';
+
+import HelloWorld from './HelloWorld.jsx';
+import TodoList from './TodoList.jsx';
+
+class Main extends React.Component {
+  render() {
+    return (
+      <div>
+        <HelloWorld />
+        <TodoList />
+      </div>
+    );
+  }
+}
+
+Main.defaultProps = {
+};
+
+export default Main;
 
 
 // require('normalize.css/normalize.css');
