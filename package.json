@@ -64,8 +64,11 @@
   },
   "dependencies": {
     "core-js": "^2.0.0",
+    "jquery": "^2.2.3",
     "normalize.css": "^4.0.0",
     "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react-bootstrap": "^0.29.0",
+    "react-dom": "^0.14.0",
+    "react-router": "^2.3.0"
   }
 }

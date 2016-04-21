@@ -1,0 +1,11 @@
+{
+  "Todo": {
+    "date": "dateString - Bootstrap date tool",
+    "dueDate": "dateString - Bootstrap date tool",
+    "action": "String",
+    "project": "String - Each stored in an array for reference",
+    "tags": "String[]",
+    "complexity": "Int - 0-4",
+    "importance": "Int - 0-3",
+  }
+}

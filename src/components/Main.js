@@ -3,25 +3,27 @@ require('styles/App.css');
 
 import React from 'react';
 
-import HelloWorld from './HelloWorld.jsx';
-import TodoList from './TodoList.jsx';
+import Footer from './Footer.jsx';
+import Header from './Header.jsx';
+import Route from './Route.jsx';
 
 class Main extends React.Component {
   render() {
     return (
       <div>
-        <HelloWorld />
-        <TodoList />
+        <Header/>
+        <Route/>
+        <Footer/>
       </div>
     );
   }
 }
 
+
 Main.defaultProps = {
 };
 
 export default Main;
-
 
 // require('normalize.css/normalize.css');
 // require('styles/App.css');

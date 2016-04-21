@@ -5,9 +5,8 @@ class HeaderComponent extends React.Component {
   render() {
     return (
       <div>
-      <Button bsStyle="success">Todo</Button>
-      <a href="#">Home</a>
-      <a href="#/todo">Todo</a>
+        <Button bsStyle="success" href="#/">Home</Button>
+        <Button bsStyle="success" href="#/todo">Todo</Button>
       </div>
     );
   }
