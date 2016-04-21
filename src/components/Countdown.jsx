@@ -29,12 +29,15 @@ class CountdownComponent extends React.Component {
     this.setState({days: countdown.days, hours: countdown.hours, minutes: countdown.minutes, seconds: countdown.seconds});
   }
   componentWillMount() {
-    this.countdown('April 8, 2016 13:00');
+    this.countdown(this.props.endDate);
   }
   componentDidMount() {
-    window.setInterval(function() {
-      this.countdown('April 8, 2016 13:00');
+    this.countdownInterval = window.setInterval(function() {
+      this.countdown(this.props.endDate);
     }.bind(this), 500);
+  }
+  componentWillUnmount() {
+    window.clearInterval(this.countdownInterval);
   }
   render() {
     return (
@@ -43,6 +46,10 @@ class CountdownComponent extends React.Component {
       </div>
     );
   }
+}
+
+CountdownComponent.defaultProps ={
+  endDate: 'April 23, 2016 13:00'
 }
 
 export default CountdownComponent;

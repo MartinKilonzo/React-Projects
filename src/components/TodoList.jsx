@@ -1,10 +1,10 @@
 import React from 'react';
 
-import DeadlineMonitor from './DeadlineMonitor.jsx';
-import EditMode from './EditMode.jsx';
-import FilterField from './FilterField.jsx';
-import FilterButtons from './FilterButtons.jsx';
-import List from '../actions/List.jsx';
+import DeadlineMonitor from './Todo/DeadlineMonitor.jsx';
+import EditMode from './Todo/EditMode.jsx';
+import FilterField from './Todo/FilterField.jsx';
+import FilterButtons from './Todo/FilterButtons.jsx';
+import ListTodos from '../actions/ListTodos.jsx';
 
 class TodoComponent extends React.Component {
   render() {
@@ -16,22 +16,17 @@ class TodoComponent extends React.Component {
            <FilterField />
            <FilterButtons />
          </div>
-        <TodoListComponent />
+        <ListTodos {...this.props} itemClassName="todo" />
       </div>
     );
   }
 }
+const items = ['red', 'blue', 'orange', 'purple'];
 
-TodoComponent.defaultProps = {};
+TodoComponent.defaultProps = {
+  ids: 0,
+  class: 'todo',
+  list: items
+};
 
-const items = ['red', 'blue', 'green'];
-
-class TodoListComponent extends React.Component {
-  render() {
-    return (
-      <List list={ items } itemClassName="list" />
-    );
-  }
-}
-
-export default TodoComponent
+export default TodoComponent;

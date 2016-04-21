@@ -30,9 +30,16 @@ class ClockComponent extends React.Component {
     this.clock();
   }
   componentDidMount() {
+    this.props.intervalIds.push(
     window.setInterval(function() {
       this.clock();
-    }.bind(this), 500);
+    }.bind(this), 500)
+  );
+  }
+  componentWillUnmount() {
+    this.props.intervalIds.forEach(function(timer){
+      window.clearInterval(timer);
+    });
   }
   render() {
     return (
@@ -41,6 +48,10 @@ class ClockComponent extends React.Component {
       </div>
     );
   }
+}
+
+ClockComponent.defaultProps = {
+  intervalIds: []
 }
 
 export default ClockComponent;
