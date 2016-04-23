@@ -6,11 +6,11 @@ class ListTodos extends React.Component {
     let itemClass = this.props.itemClassName;
     return (
       <div className="todoList">{this.props.list.map(function(item) {
-          return <div className={ itemClass } key={ids++}>
+          return <div className={itemClass} key={ids++}>
             {item}
           </div>
-        })
-}</div>
+        })}
+      </div>
     );
   }
 }

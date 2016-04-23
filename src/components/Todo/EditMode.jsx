@@ -1,9 +1,13 @@
 import React from 'react';
 
+import NewTodo from './NewTodo.jsx';
+
 class EditMode extends React.Component {
   render() {
     return (
-      <div></div>
+      <div>
+        <NewTodo />
+      </div>
     );
   }
 }
