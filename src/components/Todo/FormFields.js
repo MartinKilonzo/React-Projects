@@ -4,15 +4,13 @@ const dateField = {
   fieldTitle: 'Date',
   placeholder: new Date().toDateString()
 };
-// export {dateField};
 
 const dueField = {
-  field:'due',
+  field: 'due',
   controlId: 'formInlineDateDue',
   fieldTitle: 'Due',
   placeholder: new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000).toDateString()
 };
-// export {dueField};
 
 const taskField = {
   field: 'task',
@@ -20,7 +18,6 @@ const taskField = {
   fieldTitle: 'Task',
   placeholder: 'Build a Robot'
 };
-// export {taskField};
 
 const projectField = {
   field: 'project',
@@ -28,16 +25,22 @@ const projectField = {
   fieldTitle: 'Project',
   placeholder: 'Robots \'R\' Us'
 };
-// export {projectField};
 
-const TextFields = [
+const weatherField = {
+  field: 'weather',
+  controlId: 'formInlineWeather',
+  fieldTitle: 'Project',
+  placeholder: 'Robots \'R\' Us'
+};
+
+const textFields = [
   dateField,
   dueField,
   taskField,
   projectField
 ];
 export {
-  TextFields
+  textFields
 };
 
 const complexity = {
@@ -58,7 +61,7 @@ const importance = {
   value: 0
 };
 
-const DropdownFields = [complexity, importance];
+const dropdownFields = [complexity, importance];
 export {
-  DropdownFields
+  dropdownFields
 };

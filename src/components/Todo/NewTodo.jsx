@@ -11,7 +11,7 @@ import {
 } from 'react-bootstrap';
 
 // import {dateField, dueField, taskField, projectField} from './FormFields.js';
-import {TextFields as textFields, DropdownFields as dropdownFields} from './FormFields.js';
+import {textFields, dropdownFields} from './FormFields.js';
 
 class TextFieldComponent extends React.Component {
   constructor(props) {
