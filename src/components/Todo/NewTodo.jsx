@@ -1,4 +1,5 @@
 import React from 'react';
+import Update from 'react-addons-update';
 import {
   Form,
   FormGroup,
@@ -74,12 +75,18 @@ class NewTodoComponent extends React.Component {
     this.updateForm = this.updateForm.bind(this);
     this.submitForm = this.submitForm.bind(this);
   }
-  updateForm(value, field) {
-    this.state.value[field] = value;
+  updateForm(newVal, field) {
+    let newState = Update(this.state, {
+      value: {[field]: {$set: [newVal] }}
+    });
+    this.setState(newState);
   }
   submitForm(event) {
     event.preventDefault();
     console.log(this.state.value);
+    //Validate form
+    //Push new todo to list
+    this.props.newTodo(this.state.value);
   }
   render() {
     return (
@@ -98,7 +105,7 @@ class NewTodoComponent extends React.Component {
 
 let values = {};
 textFields.forEach(function(property) {
-  values[property.field] = property.value;
+  values[property.field] = property.placeholder;
 });
 dropdownFields.forEach(function(property) {
   values[property.field] = property.value;
