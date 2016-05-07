@@ -48,8 +48,8 @@ const complexity = {
   controlId: 'formInlineComplexity',
   dropdownId: 'complexityDropdown',
   fieldTitle: 'Complexity',
-  options: [0, 1, 2, 3, 4],
-  value: 0
+  options: ['minimal', 'minor', 'moderate', 'complex', 'extreme'],
+  value: 'complex'
 };
 
 const importance = {
@@ -57,8 +57,8 @@ const importance = {
   controlId: 'formInlineImportance',
   dropdownId: 'importanceyDropdown',
   fieldTitle: 'Importance',
-  options: [0, 1, 2, 3],
-  value: 0
+  options: ['minimal', 'minor', 'moderate', 'important', 'extreme'],
+  value: 'important'
 };
 
 const dropdownFields = [complexity, importance];

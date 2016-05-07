@@ -57,7 +57,7 @@ class DropDownFieldComponent extends React.Component {
           <InputGroup.Addon>{this.props.fieldTitle}</InputGroup.Addon>
           <DropdownButton id={this.props.dropdownId} title={this.state.value} onSelect={this.handleChange}>
             {this.props.options.map(function(option, key) {
-              return <MenuItem key={key} eventKey={key}>{option}</MenuItem>
+              return <MenuItem key={key} eventKey={option}>{option}</MenuItem>
             })}
           </DropdownButton>
         </InputGroup>
@@ -77,7 +77,7 @@ class NewTodoComponent extends React.Component {
   }
   updateForm(newVal, field) {
     let newState = Update(this.state, {
-      value: {[field]: {$set: [newVal] }}
+      value: {[field]: {$set: newVal }}
     });
     this.setState(newState);
   }
